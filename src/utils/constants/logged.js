@@ -9,7 +9,8 @@ export const logged = [
   },
   {
     title: "Notes",
-    icon: require("/Users/jacobdominguez/Documents/codiyapa/MERN/Mern Auth/client/src/assets/note.png"),
+    icon: require("../../assets/note.png"),
     funcion: () => openNotes(),
   },
 ];
+
