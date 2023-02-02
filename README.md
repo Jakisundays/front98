@@ -1,3 +1,1 @@
-Tomar fotos y subelo a portofolio.
-
-arregla github y .gitIgnore
+Windows 98 notemaker.
