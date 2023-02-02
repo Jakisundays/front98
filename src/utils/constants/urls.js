@@ -1,1 +1,1 @@
-export const URL = 'http://localhost:8000'
+export const URL = 'https://server-windows98.onrender.com/8000'

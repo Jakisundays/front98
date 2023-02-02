@@ -7,6 +7,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { goRegister, loginSwitch } from "../store/slices/windowsSlice";
 import { getLocal } from "../utils/helper/local";
+import { URL } from "../utils/constants/urls";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -18,7 +19,7 @@ const LoginForm = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/user/login", {
+      const response = await axios.post(`${URL}/user/login`, {
         username,
         password,
       });

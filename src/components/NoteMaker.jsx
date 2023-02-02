@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { closeNewNotes } from "../store/slices/iconSlice";
 import { addOneNote } from "../store/slices/noteSlice";
 import { notasContext } from "../pages/Logged";
+import { URL } from "../utils/constants/urls";
 
 const NoteMaker = () => {
   const [title, setTitle] = useState("");
@@ -18,7 +19,7 @@ const NoteMaker = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `http://localhost:8000/notes/${localStorage.getItem('username')}`,
+        `${URL}/notes/${localStorage.getItem('username')}`,
         {
           title,
           message,

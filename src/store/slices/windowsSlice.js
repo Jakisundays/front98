@@ -37,7 +37,7 @@ export const windowsSlice = createSlice({
       localStorage.removeItem("jwt");
       localStorage.removeItem("id");
       localStorage.removeItem("username");
-      window.location.replace('http://localhost:3000')
+      window.location.replace('https://front-windows98.onrender.com')
     },
   },
 });

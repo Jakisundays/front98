@@ -7,6 +7,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { goLogin, registerSwitch } from "../store/slices/windowsSlice";
 import { getLocal } from "../utils/helper/local";
+import { URL } from "../utils/constants/urls";
 
 const RegisterForm = () => {
   const [userName, setUserName] = useState("");
@@ -19,7 +20,7 @@ const RegisterForm = () => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/user/signup", {
+      const response = await axios.post(`${URL}/user/signup`, {
         username: userName,
         email,
         password,
