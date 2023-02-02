@@ -31,6 +31,7 @@ const NoteIcon = ({ title, message, _id }) => {
 
   const patchNote = async () => {
     try {
+      setExpand(false);
       await axios.patch(
         `${URL}/notes/${_id}`,
         {
@@ -42,7 +43,6 @@ const NoteIcon = ({ title, message, _id }) => {
           },
         }
       );
-      setExpand(false);
     } catch (error) {
       console.log(error.message);
     }
